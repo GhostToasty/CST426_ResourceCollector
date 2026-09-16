@@ -1037,7 +1037,7 @@ MonoBehaviour:
     PlayerPrefab: {fileID: 1855797244298458106, guid: 24e075b32f01fa74eae0fe6c15ccb589, type: 3}
     Prefabs:
       NetworkPrefabsLists:
-      - {fileID: 11400000, guid: 8cfc14cc87c33734abad2cb10bdbe1ef, type: 2}
+      - {fileID: 11400000, guid: bfd151d46f012a0439e62c2039147e7a, type: 2}
     TickRate: 30
     ClientConnectionBufferTimeout: 10
     ConnectionApproval: 0
@@ -2109,6 +2109,10 @@ PrefabInstance:
       propertyPath: _selectionColor.r
       value: 5.3403134
       objectReference: {fileID: 0}
+    - target: {fileID: 904535776458481444, guid: 73dbe4cc9c782f74db20a3ec1e60a2f5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1622723216753863577, guid: 73dbe4cc9c782f74db20a3ec1e60a2f5, type: 3}
       propertyPath: GlobalObjectIdHash
       value: 3327085608
@@ -2159,6 +2163,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4217106867965326089, guid: 73dbe4cc9c782f74db20a3ec1e60a2f5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6174623183778776282, guid: 73dbe4cc9c782f74db20a3ec1e60a2f5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6481029239578617625, guid: 73dbe4cc9c782f74db20a3ec1e60a2f5, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
