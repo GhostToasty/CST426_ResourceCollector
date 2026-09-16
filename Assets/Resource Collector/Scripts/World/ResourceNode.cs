@@ -78,7 +78,7 @@ public class ResourceNode : Interactable
             while (amount > 0)
             {
                 NetworkObject.InstantiateAndSpawn(_producedPrefab.gameObject, NetworkManager, 
-                    position: transform.position + new Vector3(Random.Range(-1, 1), 0, Random.Range(-1, 1)), 
+                    position: transform.position + new Vector3(Random.Range(-1, 1), 0, Random.Range(-2, 2)), 
                     rotation: transform.rotation * Quaternion.Euler(0, Random.Range(-15, 15), 0));
                 amount--;
             }
