@@ -82,12 +82,17 @@ public class PlayerHeldItem : NetworkBehaviour
         // catalog prefab, spawn it with NetworkObject.InstantiateAndSpawn, then
         // empty the hand.
         if (_heldObjectType.Value == ObjectType.None) return;
-        Debug.Log($"_heldObjectType.Value {_heldObjectType.Value}");
 
         ItemCatalogEntry matchingEntry = _itemCatalog.Find(item => item.type == _heldObjectType.Value);
-        Debug.Log($"matching entry {matchingEntry.prefab.gameObject}");
-        NetworkObject.InstantiateAndSpawn(matchingEntry.prefab.gameObject, NetworkManager, position: position);
-
+        
+        if (_heldObjectType.Value == ObjectType.Axe || _heldObjectType.Value == ObjectType.PickAxe)
+        {
+            NetworkObject.InstantiateAndSpawn(matchingEntry.prefab.gameObject, NetworkManager, 
+            position: transform.position + new Vector3(0, 0.15f, 0), rotation: transform.rotation * Quaternion.Euler(90, 0, 0));
+        }
+        else
+            NetworkObject.InstantiateAndSpawn(matchingEntry.prefab.gameObject, NetworkManager, position: position);
+        
         Clear();
         // Next: Slice 7.2 in ItemPickup.Interact.
     }
